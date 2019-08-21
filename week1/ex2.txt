@@ -1,0 +1,16 @@
+    1  mkdir week1
+    2  cd ./week1/
+    3  ls /usr/bin/ | grep gcc > ex1.txt
+    4  date
+    5  date --help
+    6  date +"%T"
+    7  chmod 755 ./ex3.sh 
+    8  ./ex3.sh 
+    9  sh ./ex3.sh
+   10  rm ./ex1.txt 
+   11  ls /usr/bin/ | grep gcc | sort -r > ex1.txt
+   12  nano ./main.c
+   13  gcc main.c -o ex4
+   14  ex4
+   15  ./ex4 
+   16  history > ex2.txt
