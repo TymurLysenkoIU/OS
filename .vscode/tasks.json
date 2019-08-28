@@ -1,0 +1,18 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks":
+  [
+    {
+      "label": "Compile single C file for debug",
+      "group": "build",
+      "type": "shell",
+      "isBackground": false,
+
+      "linux": {
+        "command": "mkdir -p '${fileDirname}/bin' && cc '${file}' -g -o '${fileDirname}/bin/${fileBasenameNoExtension}.out'",
+      }
+    }
+  ]
+}
