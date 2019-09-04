@@ -1,0 +1,11 @@
+Address of c:-9076
+Value of c:22
+
+Address of pointer pc:-9076
+Content of pointer pc:22
+
+Address of pointer pc:-9076
+Content of pointer pc:11
+
+Address of c:-9076
+Value of c:2
