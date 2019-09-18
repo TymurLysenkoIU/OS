@@ -11,7 +11,7 @@
       "isBackground": false,
 
       "linux": {
-        "command": "mkdir -p '${fileDirname}/bin' && cc '${file}' -g -o '${fileDirname}/bin/${fileBasenameNoExtension}.out'",
+        "command": "mkdir -p '${fileDirname}/bin' && cc -lpthread '${file}' -g -o '${fileDirname}/bin/${fileBasenameNoExtension}.out'",
       }
     }
   ]
