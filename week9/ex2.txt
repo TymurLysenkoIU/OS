@@ -1,0 +1,3 @@
+The input in the file DecreasedRatio.txt consits of unique pages, so that there will never be any hit, since the pages always need to be placed in the memory, regardless of the number of page frames.
+
+The input in the file IncreasedRatio.txt consits of frequently used pages with numbers 10, 32 and 92. In total there are 5 unique page references. If the number of page frames is "enough" (e. g. five), there will more hits than misses, because the most frequently used pages are not discarded longer, than the not frequently used ones.
