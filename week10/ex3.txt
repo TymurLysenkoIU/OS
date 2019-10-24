@@ -1,0 +1,7 @@
+-rw-rw-r-- 1 sitiritis sitiritis 0 Oct 24 18:25 ./_ex3.txt
+-rw-rw-rw- 1 sitiritis sitiritis 0 Oct 24 18:25 ./_ex3.txt
+-rwx---rwx 1 sitiritis sitiritis 0 Oct 24 18:25 ./_ex3.txt
+
+660 - allows reading and writing to a file for an owner and owner's group and forbids read, write, execute for all others.
+775 - allows reading, writing and executing a file for an owner and owner's group and allows only read and execute the file for all others.
+777 - allows all actions to be performed on a file by everyone.

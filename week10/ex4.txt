@@ -1,0 +1,5 @@
+Inode: 918126
+	Filenames:
+		file1
+		link1
+
