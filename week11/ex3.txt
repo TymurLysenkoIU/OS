@@ -1,0 +1,3 @@
+The stdout in C is line buffered, therefore in the 1-st program when the patern process calls printf("Hello"), the string "Hello" is stored in the buffer, the flushing occurs when a new line character is added to the buffer after forking a child process, so both print the contents of their buffers, and since the forking preserves almost whole state of a process both processes contain the string "Hello\n" in their buffers before being flushed.
+
+In the second program the parent process flushes its buffer when calls printf("Hello\n"), so at this point the stdout's buffer is empty and when a child process forks it also has an empty buffer, so both processes just print a new line.
