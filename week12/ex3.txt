@@ -1,0 +1,37 @@
+Command ran: ./copy copy.c copy_copy.c
+
+Without O_SYNC flag:
+  Buffer size:
+    1Kb:
+      real    0m0.005s
+      user    0m0.005s
+      sys     0m0.000s
+    10Kb:
+      real    0m0.005s
+      user    0m0.004s
+      sys     0m0.000s
+    100Kb:
+      real    0m0.004s
+      user    0m0.003s
+      sys     0m0.002s
+
+With O_SYNC flag:
+  Buffer size:
+    1Kb:
+      real    0m0.187s
+      user    0m0.003s
+      sys     0m0.000s
+    10Kb:
+      real    0m0.059s
+      user    0m0.004s
+      sys     0m0.001s
+    100Kb:
+      real    0m0.060s
+      user    0m0.001s
+      sys     0m0.004s
+
+Explanations
+
+First, compare the non-modified program with different sizes of the buffer. The copy.c file is 2,128 bytes, which is a little bit more than 2Kb, so there must be 3 read and write operations to copy the file, so the performance of the program's code increases, when the buffer size increases to 10Kb (now the program needs to perform only 1 read and write operations) and the time spent by the operating system to perform its tasks is insignificant, because the without O_SYNC flag it is not guaranteed that the call returns after an IO operation was completed, so it might be implemented in such way, that the system call returns immediately. However, when the size of the buffer becomes big enough, i. e. 100Kb, the system spends some time for memory management.
+
+When O_SYNC flag is enabled, it is guaranteed that IO operations return, once the OS "thinks" the data is transferred to the disk, so the sys time increases.
